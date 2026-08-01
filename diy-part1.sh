@@ -16,3 +16,11 @@
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+
+# добавляем свой DTS
+mkdir -p target/linux/ramips/image/mt7621
+
+cp -f files/mt7621_xiaomi_mi-router-4a-gigabit-32m.dts \
+target/linux/ramips/dts/
+
+echo "Custom DTS copied"
